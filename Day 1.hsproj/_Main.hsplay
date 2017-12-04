@@ -6,4 +6,29 @@ xs = prepare input
 ps = pair xs
 
 
+
+day1 "1122"
+day1 "1111"
+day1 "1234"
+day1 "91212129"
+
 day1 input
+
+
+length [1,2,3,4]
+
+
+
+list = [1,2,3,4]
+rotate 1 list
+
+rotate (halfLength list) list
+
+day1' "1212" -- 6
+day1' "1221" -- 0
+day1' "123425" -- 4
+day1' "123123" -- 12
+day1' "12131415" -- 4
+
+day1' input
+
