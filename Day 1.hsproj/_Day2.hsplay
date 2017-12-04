@@ -1,0 +1,16 @@
+-- Haskell Playground 1.0
+
+input = [[5,1,9,5],
+         [7,5,3],
+         [2,4,6,8]]
+         
+
+list = [1,2,3,4]
+
+diff list
+
+xs = rowdiffer input
+
+day2 "test"
+
+

@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Main where
+module Day1 where
 
 import qualified Data.Text.IO as T
 
