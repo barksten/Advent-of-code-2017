@@ -1,10 +1,8 @@
-
-module Day1 where
+module Lib
+    ( someFunc
+    ) where
 
 import Data.Char
-
-main :: IO ()
-main = interact someFunc
 
 someFunc :: String -> String
 someFunc s = show (day1 s)
@@ -22,6 +20,9 @@ isNeighbors (x, y) = x == y
 
 day1 :: String -> Int
 day1 = sum . map fst . filter isNeighbors . pair . prepare
+
+
+--part 2
 
 rotate _ [] = []
 rotate n xs = zipWith const (drop n (cycle xs)) xs
