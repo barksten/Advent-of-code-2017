@@ -7,10 +7,40 @@ input = [[5,1,9,5],
 
 list = [1,2,3,4]
 
-diff list
-
-xs = rowdiffer input
-
-day2 "test"
+sortRow list
 
 
+map sortRow input
+
+findEvenly 8 [8, 4, 2]
+findEvenly 8 [5, 3]
+findEvenly 15 [4, 5, 3, 1]
+
+evenly [8, 3, 2]
+
+evenly [9,8,5,2]
+findEvenly 9 [8,5,2]
+
+evenly [9, 4, 7, 3]
+divide [9,3]
+
+
+test2 = map evenly test
+
+test2
+
+map divide test2
+
+
+matrix = makeMatrix "5 9 2 8\n9 4 7 3\n3 8 6 5"
+
+matrix
+test = map sortRow matrix
+
+test
+
+test2 = map evenly test
+
+test2
+
+map divide test2
