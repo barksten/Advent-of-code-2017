@@ -1,0 +1,13 @@
+-- Haskell Playground 1.0
+anagrams "b" (words "a ab abc abd abf abj")
+
+
+isValid (words "abcde fghij")
+isValid (words "abcde xyz ecdab")
+isValid (words "a ab abc abd abf abj")
+isValid (words "iiii oiii ooii oooi oooo")
+isValid (words "oiii ioii iioi iiio")
+
+
+head ["test"]
+containsAnagram ["test"]

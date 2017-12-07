@@ -1,0 +1,61 @@
+-- Haskell Playground 1.0
+1^2
+2^2
+3^2
+4^2
+5^2
+
+
+endNumbers
+
+
+countOnOneSide 1
+countOnOneSide 2
+countOnOneSide 3
+countOnOneSide 4
+
+
+
+
+sqrt 50
+
+[1,3,5,7]
+[1,9,16]
+
+
+
+indexOf 1
+indexOf 12
+indexOf 23
+indexOf 1024
+
+indexOf 312051
+
+
+
+countOnOneSide (indexOf 1)
+countOnOneSide (indexOf 12)
+countOnOneSide (indexOf 23)
+countOnOneSide (indexOf 1024)
+
+countOnOneSide (indexOf 312051)
+
+
+
+9 - 1
+49 - 12
+49 - 23
+
+8 `rem` 4
+37 `rem` 4
+26 `rem` 4
+
+
+fst (spiral !! indexOf 1) - 1
+
+fst (spiral !! indexOf 12) - 12
+fst (spiral !! indexOf 23) - 23
+
+fst (spiral !! indexOf 312051) - 312051
+
+13 `quot` 4
