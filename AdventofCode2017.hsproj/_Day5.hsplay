@@ -1,0 +1,7 @@
+-- Haskell Playground 1.0
+
+day5 "0\n3\n0\n1\n-3"
+
+input <- readFile "input-d5.txt"
+
+day5 input

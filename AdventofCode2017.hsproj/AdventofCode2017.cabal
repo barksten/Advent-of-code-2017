@@ -5,7 +5,10 @@ build-type: Simple
 license: AllRightsReserved
 stability: experimental
 data-files:
-    Input.txt
+    input-d2.txt
+    input-d1.txt
+    input-d4.txt
+    input-d5.txt
 x-ghc-framework-version: 8.0.2-8.9-3
 x-last-ide-version: HfM1.5.1
 Executable AdventofCode2017
@@ -15,7 +18,7 @@ Executable AdventofCode2017
       base -any
   default-language: Haskell2010
   other-modules:
+      Day5
       Day4
-      Lib
       Day2
       Day3

@@ -1,5 +1,4 @@
 -- Haskell Playground 1.0
-anagrams "b" (words "a ab abc abd abf abj")
 
 
 isValid (words "abcde fghij")
@@ -10,4 +9,7 @@ isValid (words "oiii ioii iioi iiio")
 
 
 head ["test"]
-containsAnagram ["test"]
+
+input <- readFile "input-d4.txt"
+day4 input
+

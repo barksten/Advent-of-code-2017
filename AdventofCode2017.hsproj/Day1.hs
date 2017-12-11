@@ -2,16 +2,17 @@
 module Day1 where
 
 import Data.Char
+       
 
 main :: IO ()
-main = interact someFunc
+main = interact solution
 
-someFunc :: String -> String
-someFunc s = show (day1 s)
+solution :: String -> String
+solution s = show (day1 s)
 
 
 prepare :: String -> [Int]
-prepare = map digitToInt
+prepare = map digitToInt . filter isDigit
 
 pair :: [a] -> [(a, a)]
 pair xs = zip xs (last xs : init xs)

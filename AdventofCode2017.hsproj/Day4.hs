@@ -1,11 +1,14 @@
 module Day4
-    ( someFunc
+    ( solution
     ) where
 
 import Data.List
 
-someFunc :: String -> String
-someFunc s = show (day4 s)
+main :: IO ()
+main = interact solution
+
+solution :: String -> String
+solution s = show (day4 s)
 
 type Words = [String]
 

@@ -1,9 +1,12 @@
 module Day3
-    ( someFunc
+    ( solution
     ) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+main :: IO ()
+main = interact solution
+
+solution :: String -> String
+solution s  = "someFunc"
 
 
 endNumbers = map (^2) (filter odd [1..1000]) 

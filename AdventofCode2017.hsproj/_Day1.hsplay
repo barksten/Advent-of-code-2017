@@ -5,7 +5,12 @@ xs = prepare input
 
 ps = pair xs
 
+input <- readFile "input-d1.txt"
 
+filter isDigit input
+
+
+day1' input
 
 day1 "1122"
 day1 "1111"
