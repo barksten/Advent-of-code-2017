@@ -3,6 +3,7 @@ module Day6
     ) where
       
 import Data.Char
+import Data.List
 
 main :: IO ()
 main = interact solution
@@ -10,20 +11,24 @@ main = interact solution
 solution :: String -> String
 solution s = show (day6 s)
 
-prepare :: String -> [Bank]
-prepare = map digitToInt . filter isDigit
+parseInt :: String -> Int
+parseInt s = read s :: Int
 
-day6 :: String -> [Bank]
-day6 input = redistribute (banks !! idx) (idx) (updateNth idx (const 0) banks)
+prepare :: String -> [Bank]
+prepare = map parseInt . words
+
+day6 :: String -> Int
+day6 input = length (findConfigs [banks]) - 1
   where banks = prepare input
-        idx = maxi banks
 
 type Bank = Int
 type Index = Int
 
 maxi :: [Bank] -> Index
-maxi xs = snd (maximum (zip xs [0..]))
-
+maxi xs = case elemIndex (maximum xs) xs of --snd (maximum (zip xs [0..]))
+              Just n -> n
+              Nothing -> 0 -- TODO: exception
+              
 redistribute :: Int -> Index -> [Bank] -> [Bank]
 redistribute n i xs
      | n == 0 = xs
@@ -36,3 +41,12 @@ updateNth n f (x:xs)
      
 wrappedIndex :: Int -> [a] -> Int
 wrappedIndex i xs = mod i (length xs)
+
+findConfigs :: [[Bank]] -> [[Bank]]
+findConfigs (xs:xss)
+    | xs == [] = [[]]
+    | xss == [[]] = [xs]
+    | elem xs xss = xs:xss
+    | otherwise = findConfigs (newConfig:xs:xss)
+  where idx = maxi xs; newConfig = redistribute (xs !! idx) (wrappedIndex(idx+1) xs) (updateNth idx (const 0) xs)
+         
