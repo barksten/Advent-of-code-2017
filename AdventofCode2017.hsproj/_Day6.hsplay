@@ -65,3 +65,6 @@ findConfigs [example]
 
 day6 input
 
+day6' "0\t2\t7\t0"
+day6' input
+

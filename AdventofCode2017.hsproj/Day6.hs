@@ -20,6 +20,10 @@ prepare = map parseInt . words
 day6 :: String -> Int
 day6 input = length (findConfigs [banks]) - 1
   where banks = prepare input
+  
+day6' :: String -> Int
+day6' input = length (findConfigs [patt] ) - 1
+  where patt = head (findConfigs [(prepare input)])
 
 type Bank = Int
 type Index = Int
