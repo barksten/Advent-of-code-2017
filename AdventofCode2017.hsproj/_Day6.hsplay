@@ -1,0 +1,29 @@
+-- Haskell Playground 1.0
+
+
+banks = [0,2,7,0]
+
+maxi banks
+
+maxi [1,1,1,1,3,1]
+
+redistribute 2 2 banks
+
+updateNth 2 (const 0) banks
+
+updateNth 2 (+1) banks
+
+input <- readFile "input-d6.txt"
+words input
+
+test = prepare input
+
+
+redistribute 9 1 [0,0,0,0]
+
+wrappedIndex 6 [0,1,2]
+
+day6 "0270"
+day6 "2322"
+maxi [2,1,3,3] -- borde vara 2!!
+

@@ -6,6 +6,7 @@ license: AllRightsReserved
 stability: experimental
 data-files:
     input-d2.txt
+    input-d6.txt
     input-d1.txt
     input-d4.txt
     input-d5.txt
@@ -20,5 +21,6 @@ Executable AdventofCode2017
   other-modules:
       Day5
       Day4
+      Day6
       Day2
       Day3
